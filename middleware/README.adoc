@@ -1,5 +1,7 @@
 = Overview
 
+image::images/middleware_sketch.png[Initial Brainstorming Session]
+
 :toc:
 
 [cloud-intro]
