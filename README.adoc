@@ -1,7 +1,6 @@
 = Overview
 
 image::images/middleware-sketch.png[Initial Brainstorming]
-image::pics/middleware-sketch.png[XXX]
 
 :toc:
 
