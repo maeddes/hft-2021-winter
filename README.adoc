@@ -44,6 +44,10 @@ _The student understands the concepts and use cases of container technology and 
 * Which command transitions from a container instance to an image?
 * What does docker exec do?
 
+=== Open questions
+
+* Does docker run also building images (prior to ruuning them)? "combination of docker create and start"
+
 === Links
 
 * https://labs.play-with-docker.com/
