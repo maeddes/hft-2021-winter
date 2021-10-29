@@ -13,7 +13,7 @@ public class MiddlewareApplication {
 	@GetMapping("/")
 	public String sayHello(){
 
-		return "Hello, HfT Stuttgart";
+		return "Hello, HfT Stuttgart !!";
 	}
 
 	@GetMapping("/hello")
