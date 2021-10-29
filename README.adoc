@@ -1,6 +1,6 @@
 = Overview
 
-image::images/middleware_sketch.png[Initial Brainstorming]
+image::images/middleware-sketch.png[Initial Brainstorming]
 
 :toc:
 
@@ -35,6 +35,19 @@ _The student is able to describe cloud computing in own words and list examples 
 === Objectives and exercises
 _The student understands the concepts and use cases of container technology and is able to describe them. The first exercise is to pull sample images from an image registry (e.g. Docker Hub) and interact with them (run, expose port, execute shell, cleanup etc). After that the student can show how to build a custom image via Dockerfile and push it to a registry for others to access. Complete the exercises handed out via URL._
 
+=== Review questions
+
+* What is the difference between a container and a VM? List 3 criteria
+* Which technologies led to the evolution of docker (and why)? VMs, namespaces, chroot, cgroups, LXC, CF/Google containers
+* What is the difference between a docker daemon and the docker hub? Daemon = runtime, Docker Hub = public registry
+* What is the difference between docker run, docker pull and docker start?
+* Which command transitions from a container instance to an image?
+* What does docker exec do?
+
+=== Open questions
+
+* Does docker run also building images (prior to ruuning them)? "combination of docker create and start"
+
 === Links
 
 * https://labs.play-with-docker.com/
@@ -62,6 +75,13 @@ _The student is able to build and configure an own Spring Boot application from 
 * Annotate the Microservice with @RestController and implement a "Hello, World!" method, which responds to an HTTP GET request.
 * Add some basic "functionality" to make the service react to HTTP GET, POST calls (e.g. modify an internal list). Optional: PUT and DELETE
 * Change the configuration to make the server run on port 8081 instead of 8080
+
+=== Review questions
+
+* What is the difference (and common aspects) between Spring and Spring Boot?
+* What is the web page to start building your spring boot apps?
+* What kind of things can you configure on that Initializr? 
+* What is the role of the Actuator?
 
 === Links
 
