@@ -72,6 +72,13 @@ _The student is able to build and configure an own Spring Boot application from 
 * Add some basic "functionality" to make the service react to HTTP GET, POST calls (e.g. modify an internal list). Optional: PUT and DELETE
 * Change the configuration to make the server run on port 8081 instead of 8080
 
+=== Review questions
+
+* What is the difference (and common aspects) between Spring and Spring Boot?
+* What is the web page to start building your spring boot apps?
+* What kind of things can you configure on that Initializr? 
+* What is the role of the Actuator?
+
 === Links
 
 * https://spring.io/
