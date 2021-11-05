@@ -122,6 +122,8 @@ _The student understands the relation between container image and container, how
 
 * https://docs.docker.com/engine/reference/builder/
 * https://buildpacks.io/
+* https://buildpacks.io/docs/tools/pack/
 * https://paketo.io/
 * https://github.com/maeddes/options-galore-container-build/blob/main/walkthrough.adoc
 * https://github.com/GoogleContainerTools/jib
+
