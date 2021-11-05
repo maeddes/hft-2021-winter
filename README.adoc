@@ -108,6 +108,16 @@ _The student is able to build and configure an own Spring Boot application from 
 === Objectives and exercises
 _The student understands the relation between container image and container, how to instantiate a container from an image and how to commit to a new image from an existing container. The exercise is to build the previous Spring Boot application and put it into a container image using various options, e.g. different Dockerfile options, Google JIB, CND, Paketo and more ...? The student is aware and able to describe on a high-level what the different fundamentals of the various approaches are and is able to list advantages and disadvantages._
 
+=== Review questions
+
+* List 3 different options to build a container image
+* Explain docker build vs docker commit 
+* List 2 evolution steps of the Dockerfile and provide 1 improvement for each step (multi-stage, buildkit, caching)
+* Explain or list 1 advantage&disadvantage comparing JIB and Paketo/CNB to original Dockerfiles
+* How is a container image build up internally? Layers(!) -> effective storage of container binaries
+* Which are criterias you can think that make image building "better" - less manual steps, less config, smaller size, faster build speed, effective structure
+
+
 === Links
 
 * https://docs.docker.com/engine/reference/builder/
