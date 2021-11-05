@@ -117,6 +117,7 @@ _The student understands the relation between container image and container, how
 * How is a container image build up internally? Layers(!) -> effective storage of container binaries
 * Which are criterias you can think that make image building "better" - less manual steps, less config, smaller size, faster build speed, effective structure
 
+mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.4:build -Dimage=<MY IMAGE>
 
 === Links
 
