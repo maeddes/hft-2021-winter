@@ -95,3 +95,57 @@ _The student is able to build and configure an own Spring Boot application from 
 * https://code.visualstudio.com/docs/java/java-tutorial
 * https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack
 * https://www.gitpod.io
+
+== Module: Container Images
+
+* Difference and relation between container and container images
+* Concepts of image layers
+* "docker commit"
+* History of Dockerfile. Initial, multi-stage & BuildKit
+* Building container for Java apps
+* Using Jib, Cloud-Native Buildpacks and Paketo
+
+=== Objectives and exercises
+_The student understands the relation between container image and container, how to instantiate a container from an image and how to commit to a new image from an existing container. The exercise is to build the previous Spring Boot application and put it into a container image using various options, e.g. different Dockerfile options, Google JIB, CND, Paketo and more ...? The student is aware and able to describe on a high-level what the different fundamentals of the various approaches are and is able to list advantages and disadvantages._
+
+=== Review questions
+
+* List 3 different options to build a container image
+* Explain docker build vs docker commit 
+* List 2 evolution steps of the Dockerfile and provide 1 improvement for each step (multi-stage, buildkit, caching)
+* Explain or list 1 advantage&disadvantage comparing JIB and Paketo/CNB to original Dockerfiles
+* How is a container image build up internally? Layers(!) -> effective storage of container binaries
+* Which are criterias you can think that make image building "better" - less manual steps, less config, smaller size, faster build speed, effective structure
+
+mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.4:build -Dimage=<MY IMAGE>
+
+=== Links
+
+* https://docs.docker.com/engine/reference/builder/
+* https://buildpacks.io/
+* https://buildpacks.io/docs/tools/pack/
+* https://paketo.io/
+* https://github.com/maeddes/options-galore-container-build/blob/main/walkthrough.adoc
+* https://github.com/GoogleContainerTools/jib
+
+== Module: Persistence
+
+* Recap of container
+* Spring Data
+* Concept of entities and repositories
+* JPA and JDBC basics
+* H2, PostgeSQL, MySQL - configuration via Spring Boot profiles
+* Running databases as Docker images
+
+image::pics/spring_data_intro.png[Spring Data with Profiles]
+
+=== Objectives and exercises
+_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. The Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+
+=== Links
+
+* https://spring.io/projects/spring-data
+* https://spring.io/guides/gs/accessing-data-jpa/
+* https://www.baeldung.com/spring-data-derived-queries
+* https://docs.spring.io/spring-boot/docs/1.0.x/reference/html/howto-database-initialization.html
+
