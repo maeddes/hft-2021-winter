@@ -128,3 +128,24 @@ mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.4:build -Dimage=<MY IMAG
 * https://github.com/maeddes/options-galore-container-build/blob/main/walkthrough.adoc
 * https://github.com/GoogleContainerTools/jib
 
+== Module: Persistence
+
+* Recap of container
+* Spring Data
+* Concept of entities and repositories
+* JPA and JDBC basics
+* H2, PostgeSQL, MySQL - configuration via Spring Boot profiles
+* Running databases as Docker images
+
+image::pics/spring_data_intro.png[Spring Data with Profiles]
+
+=== Objectives and exercises
+_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. The Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+
+=== Links
+
+* https://spring.io/projects/spring-data
+* https://spring.io/guides/gs/accessing-data-jpa/
+* https://www.baeldung.com/spring-data-derived-queries
+* https://docs.spring.io/spring-boot/docs/1.0.x/reference/html/howto-database-initialization.html
+
