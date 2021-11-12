@@ -137,7 +137,7 @@ mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.4:build -Dimage=<MY IMAG
 * H2, PostgeSQL, MySQL - configuration via Spring Boot profiles
 * Running databases as Docker images
 
-image::pics/spring_data.png[Spring Data]
+image::images/spring_data.png[Spring Data]
 
 === Objectives and exercises
 _The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. The Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
