@@ -149,3 +149,20 @@ _The student is able to build a Spring Boot application (or extend an existing o
 * https://www.baeldung.com/spring-data-derived-queries
 * https://docs.spring.io/spring-boot/docs/1.0.x/reference/html/howto-database-initialization.html
 
+== Module: Cloud-native software development & Microservices (theory-block II)
+
+* CAP Theorem
+* Conway's Law
+* Fallacies of distributed computing
+* Domain-Driven Design basics
+* 12-factor application
+* Evolution of applications and deployments: Monolithic -> Service-Oriented Architecture -> Microservices
+* Introduction to serverless and FaaS terminology
+
+=== Objectives and exercises
+_The student knows about the evolution of distributed systems and the drivers towards state-of-the-art implementation and deployment. She/he can explain the underlying concepts and theories and put it into practical context. No dedicated exercises for this module. Recap of basics: Spring Boot, Docker, configuration, persistence and messaging._
+
+=== Links
+
+* https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+* https://12factor.net/
