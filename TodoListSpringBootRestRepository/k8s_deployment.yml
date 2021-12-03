@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hse-todolist
+  name: hse-todolist
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hse-todolist
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hse-todolist
+    spec:
+      containers:
+      - image: maeddes/hse-todolist:v0.1
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: H2
+        name: hse-todolist
+        resources: {}
+status: {}

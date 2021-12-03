@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div>
+    <h1>Thymeleaf List Example</h1>
+    
+    <ol>
+        <li th:each="item : ${list}" th:text="${item}"></li>
+    </ol>
+
+</div>
+
+</body>

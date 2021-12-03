@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hse-todoui
+  name: hse-todoui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hse-todoui
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hse-todoui
+    spec:
+      containers:
+      - image: maeddes/hse-todoui:v0.1
+        name: hse-todoui
+        resources: {}
+status: {}

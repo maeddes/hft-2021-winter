@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ToDos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<link rel="stylesheet" href="style.css"/>
+
+<body>
+<!-- Initial version
+<div>
+    <h1>Thymeleaf Hacky Example</h1>
+    <h2>
+        <span th:text="'Hello, ' + ${message}"></span>
+    </h2>
+    <ol>
+        <li th:each="todo : ${todos}" th:text="${todo.name}"></li>
+    </ol>
+    <form method="POST" th:action="@{/}">
+    <label for="newitem">New list item</label>
+    <input type="text" name="newitem" th:value="${newitem}" />
+    <input type="submit" value="Add!">
+    </form>
+
+    <br>
+
+    <form method="POST" th:action="@{/delete/}">
+    <label for="olditem">Delete item</label>
+    <input type="text" name="olditem" th:value="${olditem}" />
+    <input type="submit" value="Delete!">
+    </form>
+</div>-->
+
+<div>
+    <h1>Thymeleaf ToDo List Example</h1>
+    <h3>
+        <span th:text="'Hello, ' + ${message}"></span>
+    </h3>
+    <form method="POST" th:action="@{/}">
+        <label for="newitem">New ToDo Item</label>
+        <input type="text" name="newitem" th:value="${newitem}" />
+        <input type="submit" value="Add!">
+    </form>
+</div>
+
+<div th:unless="${#lists.isEmpty(todos)}">    
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Priority</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${todo.name}"/>
+            <td th:text="${todo.priority}"/>
+            <td>
+                <form method="POST" th:action="@{/delete/}">
+                    <input type="hidden" name="olditem" th:value="${todo.name}" />
+                    <input type="submit" value="Done!"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div th:if="${#lists.isEmpty(todos)}">
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>You have no ToDos :-)</td>
+            <td>None</td>
+        </tr>
+    </table>
+</div>
+
+</body>
