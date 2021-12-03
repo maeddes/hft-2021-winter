@@ -149,6 +149,16 @@ _The student is able to build a Spring Boot application (or extend an existing o
 * https://www.baeldung.com/spring-data-derived-queries
 * https://docs.spring.io/spring-boot/docs/1.0.x/reference/html/howto-database-initialization.html
 
+== Module: Synchronous Communication, API & REST
+
+* Synchronous communication
+* REST 
+  * HTTP, Basics, Maturity Model
+* Synchronous communication with RestTemplate (and Feign)
+
+=== Objectives and exercises
+_The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words. The exercise is to implement a CRUD application client to work with a REST API using either RestTemplate (or Feign)._
+
 == Module: Cloud-native software development & Microservices (theory-block II)
 
 * CAP Theorem
@@ -171,3 +181,16 @@ image:images/ui_restapp_db_config.png[Big Picture]
 
 == Module: External configuration deep-dive, OpenAPI Doc & Thymeleaf with reavtice web client intro
 
+* Various possibilities of external configuration in Spring (Boot)
+* Order of configuration options
+* Spring profiles
+* Consuming configuration properties with @Value and specifying defaults
+
+=== Objectives and exercises
+_The student is able to build a Spring Boot application with various configuration profiles and knows how to set the desired one. It is also required to understand how Spring Boot will prioritize between them, e.g. ("Who wins if multiple are specified?") and what the advantages and drawbacks of them are. The exercise is to extend the existing persistence application and provide different persistence backend for different purposes, e.g. set an in-memory database for development and test purposes and a containerized one for production._
+
+=== Links
+
+* https://docs.spring.io/spring-boot/docs/1.2.3.RELEASE/reference/html/boot-features-external-config.html
+* https://docs.spring.io/spring-boot/docs/1.3.0.M1/reference/html/howto-properties-and-configuration.html
+* https://www.baeldung.com/spring-rest-openapi-documentation
