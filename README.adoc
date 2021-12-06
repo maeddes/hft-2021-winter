@@ -179,7 +179,7 @@ _The student knows about the evolution of distributed systems and the drivers to
 
 image:images/ui_restapp_db_config.png[Big Picture]
 
-== Module: External configuration deep-dive, OpenAPI Doc & Thymeleaf with reavtice web client intro
+== Module: External configuration deep-dive, OpenAPI Doc & Thymeleaf with reactive web client intro
 
 * Various possibilities of external configuration in Spring (Boot)
 * Order of configuration options
