@@ -1,5 +1,11 @@
 = Overview
 
+=== Contact
+
+* mail: maeddes (at) gmail.com (or HfT e-mail)
+* twitter: @maeddes
+* linkedin: https://www.linkedin.com/in/matthiashaeussler/
+
 image::images/middleware_sketch.png[Initial Brainstorming]
 
 :toc:
@@ -149,6 +155,16 @@ _The student is able to build a Spring Boot application (or extend an existing o
 * https://www.baeldung.com/spring-data-derived-queries
 * https://docs.spring.io/spring-boot/docs/1.0.x/reference/html/howto-database-initialization.html
 
+== Module: Synchronous Communication, API & REST
+
+* Synchronous communication
+* REST 
+  * HTTP, Basics, Maturity Model
+* Synchronous communication with RestTemplate (and Feign)
+
+=== Objectives and exercises
+_The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words. The exercise is to implement a CRUD application client to work with a REST API using either RestTemplate (or Feign)._
+
 == Module: Cloud-native software development & Microservices (theory-block II)
 
 * CAP Theorem
@@ -169,5 +185,53 @@ _The student knows about the evolution of distributed systems and the drivers to
 
 image:images/ui_restapp_db_config.png[Big Picture]
 
-== Module: External configuration deep-dive, OpenAPI Doc & Thymeleaf with reavtice web client intro
+== Module: External configuration deep-dive, OpenAPI Doc & Thymeleaf with reactive web client intro
+
+* Various possibilities of external configuration in Spring (Boot)
+* Order of configuration options
+* Spring profiles
+* Consuming configuration properties with @Value and specifying defaults
+
+=== Objectives and exercises
+_The student is able to build a Spring Boot application with various configuration profiles and knows how to set the desired one. It is also required to understand how Spring Boot will prioritize between them, e.g. ("Who wins if multiple are specified?") and what the advantages and drawbacks of them are. The exercise is to extend the existing persistence application and provide different persistence backend for different purposes, e.g. set an in-memory database for development and test purposes and a containerized one for production._
+
+=== Links
+
+* https://docs.spring.io/spring-boot/docs/1.2.3.RELEASE/reference/html/boot-features-external-config.html
+* https://docs.spring.io/spring-boot/docs/1.3.0.M1/reference/html/howto-properties-and-configuration.html
+* https://www.baeldung.com/spring-rest-openapi-documentation
+
+== 2021-12-10 Module: Kubernetes Intro
+
+* Sketch: 
+** Limitation of a stand-alone Docker environment
+** Requirements/Responsibilities to provide an enterprise container runtime
+* Presentation: Cloud Platforms & Kubernetes
+** Kubernetes Background
+** What is CaaS?
+** Cluster & Node Concept
+** Behaviour scenarios of Kubernetes in Action
+** Base API objects: Deployments, ReplicaSets, Pods
+** Intro into kubectl 
+  
+=== Objectives and exercises
+_The student understands the requirements and expectations towards cloud platforms and is able to list them. She/he can explain the advantages over standard container operation with Docker. The exercise is to take a sample Spring Boot application and walk through the steps to containerize and deploy to Kubernetes. The student is aware about various options for local and remote Kubernetes options._
+
+=== Links - Kubernetes Options
+
+* https://github.com/learnk8s/free-kubernetes (Overview)
+
+* https://www.katacoda.com/courses/kubernetes/playground (web-based)
+* https://training.play-with-kubernetes.com/ (web-based, broken?)
+
+* https://kind.sigs.k8s.io/docs/user/quick-start/ (local)
+* https://minikube.sigs.k8s.io/docs/ (local)
+* https://docs.docker.com/get-started/kube-deploy/ (local)
+* https://k3s.io/ (local)
+* https://microk8s.io/ (local)
+
+* https://aws.amazon.com/de/education/awseducate/ (Student)
+* https://azure.microsoft.com/en-us/free/students/ (Student)
+
+
 
