@@ -22,6 +22,8 @@ public class ShoppingAPI {
     public List<ShoppingItem> getShoppingItems() {
         
         List<ShoppingItem> itemList = shoppingItemRepository.findAll();
+        
+        //shoppingItemRepository.
 
         // ArrayList<ShoppingItem> itemList = new ArrayList<String>();
         
@@ -35,18 +37,18 @@ public class ShoppingAPI {
 
     }
 
-    @PostMapping("/shoppingItem/{item}")
-    public String addShoppingItemByName(@PathVariable String item){
+    // @PostMapping("/shoppingItem/{item}")
+    // public String addShoppingItemByName(@PathVariable String item){
 
-        ShoppingItem newItem = new ShoppingItem(item);
-        shoppingItemRepository.save(newItem);
+    //     ShoppingItem newItem = new ShoppingItem(item);
+    //     shoppingItemRepository.save(newItem);
 
-        return "Yay!";
+    //     return "Yay!";
 
-    }
+    // }
 
 
-    @PostMapping(consumes = "application/json", produces = "application/json", path = "/shoppingItem/")
+    @PostMapping(consumes = "application/json", produces = "application/json", path = "/shoppingItem")
     public ShoppingItem addShoppingItem(@RequestBody ShoppingItem item){
 
         System.out.println("ShoppingItem: "+item);
