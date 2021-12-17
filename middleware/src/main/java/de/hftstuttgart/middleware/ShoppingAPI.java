@@ -28,7 +28,7 @@ public class ShoppingAPI {
         Iterator<ShoppingItem> itemTerator = iterableItems.iterator();
         while(itemTerator.hasNext()){
             ShoppingItem tempItem = itemTerator.next();
-            itemList.add(tempItem.item);
+            itemList.add(tempItem.getItem());
         }
 
         return itemList;

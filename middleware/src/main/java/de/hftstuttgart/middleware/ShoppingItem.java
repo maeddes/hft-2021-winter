@@ -4,21 +4,46 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class ShoppingItem {
 
     @Id
     @GeneratedValue
+    @JsonProperty
     long id;
 
-    String item;
-    int amount = 1;
+    private String item;
+    private int amount = 1;
 
     public ShoppingItem(){}
 
     public ShoppingItem(String itemName){
 
-        item = itemName;
+        setItem(itemName);
+    }
+
+    public ShoppingItem(String itemName, int itemAmount){
+
+        setItem(itemName);
+        setAmount(itemAmount);
     }
     
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public void setItem(String item) {
+        this.item = item;
+    }
+
 }
