@@ -75,3 +75,5 @@ _The student is able to build and configure an own Spring Boot application from 
 * https://code.visualstudio.com/docs/java/java-tutorial
 * https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack
 * https://www.gitpod.io
+
+* http://localhost:8080/v3/api-docs/

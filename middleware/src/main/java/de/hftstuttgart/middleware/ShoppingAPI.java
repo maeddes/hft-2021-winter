@@ -1,9 +1,9 @@
 package de.hftstuttgart.middleware;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,20 +16,18 @@ public class ShoppingAPI {
     @Autowired
     ShoppingItemRepository shoppingItemRepository;
 
-
-    @GetMapping("/shoppingItem/")
-    public ArrayList<String> getShoppingItems() {
+    @GetMapping(produces = "application/json", path = "/shoppingItem/")
+    public List<ShoppingItem> getShoppingItems() {
         
-    
-        Iterable<ShoppingItem> iterableItems = shoppingItemRepository.findAll();
+        List<ShoppingItem> itemList = shoppingItemRepository.findAll();
 
-        ArrayList<String> itemList = new ArrayList<String>();
+        // ArrayList<ShoppingItem> itemList = new ArrayList<String>();
         
-        Iterator<ShoppingItem> itemTerator = iterableItems.iterator();
-        while(itemTerator.hasNext()){
-            ShoppingItem tempItem = itemTerator.next();
-            itemList.add(tempItem.getItem());
-        }
+        // Iterator<ShoppingItem> itemTerator = iterableItems.iterator();
+        // while(itemTerator.hasNext()){
+        //     ShoppingItem tempItem = itemTerator.next();
+        //     itemList.add(tempItem.getItem());
+        // }
 
         return itemList;
 
@@ -44,5 +42,12 @@ public class ShoppingAPI {
         return "Yay!";
 
     }
-    
+
+    @DeleteMapping("/shoppingItem/{id}")
+    public String deleteShoppingItem(@PathVariable long id){
+       
+        shoppingItemRepository.deleteById(id);
+        return "Yay!";
+
+    }
 }
