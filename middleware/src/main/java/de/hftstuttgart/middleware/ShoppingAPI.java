@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 
 @RestController
 public class ShoppingAPI {
@@ -34,12 +36,25 @@ public class ShoppingAPI {
     }
 
     @PostMapping("/shoppingItem/{item}")
-    public String addShoppingItem(@PathVariable String item){
+    public String addShoppingItemByName(@PathVariable String item){
 
         ShoppingItem newItem = new ShoppingItem(item);
         shoppingItemRepository.save(newItem);
 
         return "Yay!";
+
+    }
+
+
+    @PostMapping(consumes = "application/json", produces = "application/json", path = "/shoppingItem/")
+    public ShoppingItem addShoppingItem(@RequestBody ShoppingItem item){
+
+        System.out.println("ShoppingItem: "+item);
+        System.out.println(item.getItem());
+        System.out.println(item.getAmount());
+        shoppingItemRepository.save(item);
+
+        return item;
 
     }
 

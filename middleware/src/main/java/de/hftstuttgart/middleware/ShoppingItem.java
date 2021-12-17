@@ -15,19 +15,19 @@ public class ShoppingItem {
     long id;
 
     private String item;
-    private int amount = 1;
+    private int amount;
 
     public ShoppingItem(){}
 
     public ShoppingItem(String itemName){
 
-        setItem(itemName);
+        this.item = itemName;
     }
 
     public ShoppingItem(String itemName, int itemAmount){
 
-        setItem(itemName);
-        setAmount(itemAmount);
+        this.item = itemName;
+        this.amount = itemAmount;
     }
     
     public int getAmount() {
