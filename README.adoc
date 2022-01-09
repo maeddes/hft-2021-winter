@@ -38,6 +38,8 @@ _The student is able to describe cloud computing in own words and list examples 
 * Docker concepts: daemon, hub, dockerfile, CLI
 * Running containers with various options
 
+image::images/docker_diagram.png[Relation Container and Image]
+
 === Objectives and exercises
 _The student understands the concepts and use cases of container technology and is able to describe them. The first exercise is to pull sample images from an image registry (e.g. Docker Hub) and interact with them (run, expose port, execute shell, cleanup etc). After that the student can show how to build a custom image via Dockerfile and push it to a registry for others to access. Complete the exercises handed out via URL._
 
@@ -49,6 +51,8 @@ _The student understands the concepts and use cases of container technology and 
 * What is the difference between docker run, docker pull and docker start?
 * Which command transitions from a container instance to an image?
 * What does docker exec do?
+
+image::images/container_exercises.png[Docker Exercises]
 
 === Open questions
 
@@ -70,6 +74,9 @@ _The student understands the concepts and use cases of container technology and 
 * Basic project structure (folders, configuration ..)
 * "Hello, World!" example explained
 * Using Actuator
+
+
+image::images/spring_boot_intro.png[Spring Boot Intro]
 
 === Objectives
 _The student is able to build and configure an own Spring Boot application from scratch with the IDE of choice. The exercise is to build an own "Hello, World!" application that exposes various REST endpoints and is able to execute CRUD operations on the state of the application. Optional: Add logging and testing, configure Actuator._
