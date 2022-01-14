@@ -245,6 +245,13 @@ _The student is able to build a Spring Boot application with various configurati
 
 image:images/distributed_container_infrastructure.png[Reasons for Kubernetes]
 
+=== Review questions
+
+* "WHY" do you need an enterprise architecture? What are the requirements?
+* How can you solve these problems with framework or containers?
+* "At which do you need more?"
+* "What else do you need?"
+
 == 2021-12-10 Module: Kubernetes Intro
 
 * Sketch: 
