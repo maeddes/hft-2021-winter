@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hftk8s
+  name: hftk8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hftk8s
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hftk8s
+    spec:
+      containers:
+      - image: maeddes/hftk8s:v1
+        name: hftk8s
+        resources: {}
+status: {}
