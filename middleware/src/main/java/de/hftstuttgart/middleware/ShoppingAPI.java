@@ -2,7 +2,10 @@ package de.hftstuttgart.middleware;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,38 +19,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ShoppingAPI {
 
+    final Logger logger = LoggerFactory.getLogger(de.hftstuttgart.middleware.ShoppingAPI.class);
+
     @Autowired
     ShoppingItemRepository shoppingItemRepository;
+
+    @Value("${HOSTNAME:not_found}")
+    String hostname;
 
     @GetMapping(produces = "application/json", path = "/shoppingItem/")
     public List<ShoppingItem> getShoppingItems() {
         
         List<ShoppingItem> itemList = shoppingItemRepository.findAll();
-        
-        //shoppingItemRepository.
-
-        // ArrayList<ShoppingItem> itemList = new ArrayList<String>();
-        
-        // Iterator<ShoppingItem> itemTerator = iterableItems.iterator();
-        // while(itemTerator.hasNext()){
-        //     ShoppingItem tempItem = itemTerator.next();
-        //     itemList.add(tempItem.getItem());
-        // }
-
         return itemList;
 
     }
-
-    // @PostMapping("/shoppingItem/{item}")
-    // public String addShoppingItemByName(@PathVariable String item){
-
-    //     ShoppingItem newItem = new ShoppingItem(item);
-    //     shoppingItemRepository.save(newItem);
-
-    //     return "Yay!";
-
-    // }
-
 
     @PostMapping(consumes = "application/json", produces = "application/json", path = "/shoppingItem")
     public ShoppingItem addShoppingItem(@RequestBody ShoppingItem item){
