@@ -18,7 +18,13 @@ spec:
         app: hftk8s
     spec:
       containers:
-      - image: maeddes/hftk8s:v1
+      - image: maeddes/k8shft:v3
         name: hftk8s
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
         resources: {}
 status: {}
