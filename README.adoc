@@ -270,6 +270,15 @@ _The student understands the requirements and expectations towards cloud platfor
 
 image:images/kubernetes_overview.png[Kubernetes in a nutshell]
 
+=== Review questions
+
+* Please write 100 lines of YAML Code :)
+* Explain the relation of "some" of the 12 factors in relation to Kubernetes
+* Explain the core principe of Kubernetes in own words. "Why" Kubernetes?
+* What is pod? What is a service?
+* Which kind of Kubernetes providers do you know? Can they be grouped somehow?
+*
+
 === Links - Kubernetes Options
 
 * https://github.com/learnk8s/free-kubernetes (Overview)
