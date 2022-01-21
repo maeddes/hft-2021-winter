@@ -3,23 +3,32 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: hftk8s
-  name: hftk8s
+    app: backend
+  name: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hftk8s
+      app: backend
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: hftk8s
+        app: backend
     spec:
       containers:
       - image: maeddes/k8shft:v3
-        name: hftk8s
+        name: backend
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: prod
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: password
+        - name: SPRING_DATASOURCE_USERNAME
+          value: matthias
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://database:5432/mydb
         readinessProbe:
           httpGet:
             path: /actuator/health

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: frontend
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - image: ntmatthiashaeussler/hftfrontend:v3
+        name: hftfrontend
+        env:
+        - name: TODOLIST_ENDPOINT
+          value: http://backend:8080/shoppingItem/
+        resources: {}
+status: {}

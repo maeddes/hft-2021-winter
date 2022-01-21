@@ -3,15 +3,14 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: hftk8s
-  name: hftk8s
+    app: database
+  name: database
 spec:
   ports:
-  - port: 8080
+  - port: 5432
     protocol: TCP
-    targetPort: 8080
+    targetPort: 5432
   selector:
-    app: hftk8s
-  type: LoadBalancer
+    app: database
 status:
   loadBalancer: {}
